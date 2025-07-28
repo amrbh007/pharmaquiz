@@ -1,38 +1,139 @@
+:root {
+  --primary-color: #2563eb;       /* Blue-600 */
+  --primary-dark: #1e40af;        /* Blue-800 */
+  --bg-color: #f8fafc;            /* Slate-50 */
+  --text-color: #0f172a;          /* Slate-900 */
+  --card-bg: #ffffff;
+  --border-radius: 0.75rem;
+  --transition-speed: 0.3s;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  --correct-bg: #dcfce7;
+  --correct-border: #22c55e;
+  --correct-text: #15803d;
+
+  --wrong-bg: #fee2e2;
+  --wrong-border: #ef4444;
+  --wrong-text: #b91c1c;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 .App {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+.start-btn,
+.result button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  margin-top: 1.5rem;
+}
+
+.start-btn:hover,
+.result button:hover {
+  background-color: var(--primary-dark);
+}
+
+.quiz-box {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+}
+
+.quiz-box h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.option {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 1rem;
+  background-color: #f1f5f9; /* Slate-100 */
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  font-weight: 500;
+}
+
+.option:hover {
+  background-color: #e0f2fe; /* Light blue */
+  border-color: var(--primary-color);
+}
+
+.option.selected {
+  background-color: #dbeafe;
+  border-color: var(--primary-color);
+  color: var(--primary-dark);
+}
+
+.option.correct {
+  background-color: var(--correct-bg);
+  border-color: var(--correct-border);
+  color: var(--correct-text);
+}
+
+.option.wrong {
+  background-color: var(--wrong-bg);
+  border-color: var(--wrong-border);
+  color: var(--wrong-text);
+}
+
+.result {
+  margin-top: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.result p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.result button {
+  display: inline-block;
+  margin: 1.5rem auto 0;
+}
+
+@media (max-width: 480px) {
+  .quiz-box {
+    padding: 1.2rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .option {
+    font-size: 0.95rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .start-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
   }
 }
