@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pharmaquiz/static/css/main.a841d195.css",
-    "main.js": "/pharmaquiz/static/js/main.74b3601f.js",
+    "main.js": "/pharmaquiz/static/js/main.1f1399a7.js",
     "static/js/453.3aa9ea6d.chunk.js": "/pharmaquiz/static/js/453.3aa9ea6d.chunk.js",
     "index.html": "/pharmaquiz/index.html",
     "main.a841d195.css.map": "/pharmaquiz/static/css/main.a841d195.css.map",
-    "main.74b3601f.js.map": "/pharmaquiz/static/js/main.74b3601f.js.map",
+    "main.1f1399a7.js.map": "/pharmaquiz/static/js/main.1f1399a7.js.map",
     "453.3aa9ea6d.chunk.js.map": "/pharmaquiz/static/js/453.3aa9ea6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a841d195.css",
-    "static/js/main.74b3601f.js"
+    "static/js/main.1f1399a7.js"
   ]
 }
